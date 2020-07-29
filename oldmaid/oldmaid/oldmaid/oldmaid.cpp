@@ -1,11 +1,14 @@
 ﻿// oldmaid.cpp : このファイルには 'main' 関数が含まれています。プログラム実行の開始と終了がそこで行われます。
 //
 
-#include <iostream>
+#include <memory>
+#include "../mhl/test_code/TestMhl.hpp"
+#include "../mhl/util/output/OutputConsole.hpp"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+  std::shared_ptr<mhl::IOutputConsole> output(new mhl::OutputConsole());
+  test::TestMhl test(output);
+  test.ExecuteUnitTest();
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー

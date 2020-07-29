@@ -1,22 +1,144 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ソース ファイル">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="oldmaid">
+      <UniqueIdentifier>{37cf4ec8-a592-4c06-87b2-3ace8df22f2d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="mhl">
+      <UniqueIdentifier>{44c698d1-bb21-4d35-aaed-655c0a9aaa4b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="リソース ファイル">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="mhl\exception">
+      <UniqueIdentifier>{efaa30ea-b9dd-47ee-816a-b07251fea521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mhl\scene">
+      <UniqueIdentifier>{c56d7a96-649c-4f4e-ad39-3d552a49087f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mhl\test">
+      <UniqueIdentifier>{bc2d2492-272d-4863-af77-a0a523e597c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mhl\test_code">
+      <UniqueIdentifier>{3596221d-1828-4104-83ee-6257f0bf59f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mhl\util">
+      <UniqueIdentifier>{2707373b-7365-4b35-83a3-4c0ed353e971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mhl\util\template">
+      <UniqueIdentifier>{8af8a4a6-a256-4078-9ba6-5a8e447e67e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mhl\util\output">
+      <UniqueIdentifier>{504f9551-89e6-4a32-bfd4-aa872e5abcc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mhl\util\string">
+      <UniqueIdentifier>{30c85227-a7af-4bed-a9bd-506b30db93dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="oldmaid\test_code">
+      <UniqueIdentifier>{88203a5c-4f4f-4080-8e43-9a9bc7da0819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="oldmaid\logic">
+      <UniqueIdentifier>{f509930e-4ed6-42cc-af77-1d90567eeba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trump">
+      <UniqueIdentifier>{5b004e3a-9c40-4e94-92ea-850b47718aa8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="oldmaid.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="mhl\exception\ArgumentException.cpp">
+      <Filter>mhl\exception</Filter>
     </ClCompile>
+    <ClCompile Include="mhl\exception\UnitTestException.cpp">
+      <Filter>mhl\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\scene\SceneStack.cpp">
+      <Filter>mhl\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test\UnitTestExecuteList.cpp">
+      <Filter>mhl\test</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\TestCppNewFunctionTest.cpp">
+      <Filter>mhl\test_code</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\TestExecuteMethod.cpp">
+      <Filter>mhl\test_code</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\TestInstanceOfTest.cpp">
+      <Filter>mhl\test_code</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\TestMhl.cpp">
+      <Filter>mhl\test_code</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\TestSceneStack.cpp">
+      <Filter>mhl\test_code</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\TestSubject.cpp">
+      <Filter>mhl\test_code</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\util\output\DummyOutputConsole.cpp">
+      <Filter>mhl\util\output</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\util\output\OutputConsole.cpp">
+      <Filter>mhl\util\output</Filter>
+    </ClCompile>
+    <ClCompile Include="oldmaid\oldmaid.cpp">
+      <Filter>oldmaid</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mhl\exception\ArgumentException.hpp">
+      <Filter>mhl\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\exception\UnitTestException.hpp">
+      <Filter>mhl\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\scene\ISceneable.hpp">
+      <Filter>mhl\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\scene\SceneStack.hpp">
+      <Filter>mhl\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test\UnitTestBase.hpp">
+      <Filter>mhl\test</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test\UnitTestExecuteList.hpp">
+      <Filter>mhl\test</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_code\TestCppNewFunctionTest.hpp">
+      <Filter>mhl\test_code</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_code\TestExecuteMethod.hpp">
+      <Filter>mhl\test_code</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_code\TestInstanceOfTest.hpp">
+      <Filter>mhl\test_code</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_code\TestMhl.hpp">
+      <Filter>mhl\test_code</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_code\TestSceneStack.hpp">
+      <Filter>mhl\test_code</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_code\TestSubject.hpp">
+      <Filter>mhl\test_code</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\util\output\DummyOutputConsole.hpp">
+      <Filter>mhl\util\output</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\util\output\IOutputConsole.hpp">
+      <Filter>mhl\util\output</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\util\output\OutputConsole.hpp">
+      <Filter>mhl\util\output</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\util\string\StdStringFormatter.hpp">
+      <Filter>mhl\util\string</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\util\template\IExecuteMethod.hpp">
+      <Filter>mhl\util\template</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\util\template\IObservable.hpp">
+      <Filter>mhl\util\template</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\util\template\Subject.hpp">
+      <Filter>mhl\util\template</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
