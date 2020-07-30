@@ -1,23 +1,33 @@
 ﻿#ifndef OLDMAID_TRUMP_LOGIC_TRUMP_HPP_
 #define OLDMAID_TRUMP_LOGIC_TRUMP_HPP_
 
+#include <memory>
+#include <string>
+
 namespace trump {
 
 // トランプクラス
 class Trump {
  public:
-  //
-  enum SUIT {
-    NONE = 0x00,
-    SPADE = 0x01,
-    HEART = 0x02,
-    DIAMOND = 0x04,
-    CLUB = 0x08,
+  // スート
+  enum class SUIT : int {
+    NONE = 0x00,     // なし
+    SPADE = 0x01,    // スペード
+    HEART = 0x02,    // ハート
+    DIAMOND = 0x04,  // ダイヤモンド
+    CLUB = 0x08,     // クラブ
   };
 
-  static const int MIN_NUMBER = 1;
-  static const int MAX_NUMBER = 13;
-  static const int MAX_JOKER = 2;
+  static const int MIN_NUMBER = 1;   // 数値の最小値
+  static const int MAX_NUMBER = 13;  // 数値の最大値
+  static const int MAX_JOKER = 2;    // ジョーカーの最大枚数
+
+ private:
+  static const std::shared_ptr<std::string> STR_SPADE;
+  static const std::shared_ptr<std::string> STR_HEART;
+  static const std::shared_ptr<std::string> STR_DIAMOND;
+  static const std::shared_ptr<std::string> STR_CLUB;
+  static const std::shared_ptr<std::string> STR_JOKER;
 
  public:
   /**
@@ -25,8 +35,9 @@ class Trump {
    *
    * @param suit スート
    * @param number 番号
+   * @param is_joker ジョーカーか
    */
-  Trump(SUIT suit, int number);
+  Trump(SUIT suit, int number, bool is_joker);
 
   /**
    * @brief Destroy the Trump object
@@ -34,21 +45,98 @@ class Trump {
    */
   virtual ~Trump();
 
+  /**
+   * @brief トランプの出力
+   *
+   */
   void Print();
-  SUIT GetSuit();
-  int GetNumber();
+
+  /**
+   * @brief トランプの出力(ショート版)
+   *
+   */
+  void PrintShort();
+
+  /**
+   * @brief スートの取得
+   *
+   * @return SUIT スート
+   */
+  SUIT GetSuit() const;
+
+  /**
+   * @brief トランプ番号の取得
+   *
+   * @return int トランプ番号
+   */
+  int GetNumber() const;
+
+  /**
+   * @brief ジョーカーか
+   *
+   * @return true ジョーカー
+   * @return false ジョーカーではない
+   */
   bool isJoker() const;
+
+  /**
+   * @brief スートがスペードか
+   *
+   * @return true スートがスペード
+   * @return false スートがスペードではない
+   */
   bool isSpade() const;
+
+  /**
+   * @brief スートがハート
+   *
+   * @return true スートがハート
+   * @return false スートがハートではない
+   */
   bool isHeart() const;
+
+  /**
+   * @brief スートがダイヤ
+   *
+   * @return true スートがダイヤ
+   * @return false スートがダイヤではない
+   */
   bool isDiamond() const;
+
+  /**
+   * @brief スートがクラブ
+   *
+   * @return true スートがクラブ
+   * @return false スートがクラブではない
+   */
   bool isClub() const;
+
+  /**
+   * @brief スート文字列を取得する
+   *
+   * @return std::string スート文字列(Spade,Heart,Diamond,Club)
+   */
   std::string GetSuitString();
+
+  /**
+   * @brief 短いスート文字列を取得する
+   *
+   * @return std::string 短いスート文字列(S,H,D,C)
+   */
   std::string GetSuitShortString();
+
+  /**
+   * @brief ソート用番号の取得
+   *
+   * @return int ソート用番号
+   */
   int GetSortNumber();
 
  private:
   SUIT suit_;
   int number_;
+  bool is_joker_;
+};
 
 }  // namespace trump
 
