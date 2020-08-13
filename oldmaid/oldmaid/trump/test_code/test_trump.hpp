@@ -32,71 +32,50 @@ class TestTrump : public mhl::UnitTestBase {
    */
   void ExecuteUnitTest();
 
-  void GetSuitNone();
-  void GetSuitSpade();
-  void GetSuitHeart();
-  void GetSuitDiamond();
-  void GetSuitClub();
-  void GetSuitJoker();
+  void GetSuitNoneJokerAll();
+  void GetSuitSpadeAll();
+  void GetSuitHeartAll();
+  void GetSuitDiamondAll();
+  void GetSuitClubAll();
 
-  void GetNumberSpade1();
-  void GetNumberHeart2();
-  void GetNumberDiamond3();
-  void GetNumberClub4();
+  void GetNumberAllSuit1();
+  void GetNumberAllSuit2();
+  void GetNumberAllSuit3();
+  void GetNumberAllSuit4();
+  void GetNumberAllSuit5();
+  void GetNumberAllSuit6();
+  void GetNumberAllSuit7();
+  void GetNumberAllSuit8();
+  void GetNumberAllSuit9();
+  void GetNumberAllSuit10();
+  void GetNumberAllSuit11();
+  void GetNumberAllSuit12();
+  void GetNumberAllSuit13();
   void GetNumberJoker1();
   void GetNumberJoker2();
-  void GetNumberHeart5();
-  void GetNumberClub6();
-  void GetNumberDiamond7();
-  void GetNumberSpade8();
-  void GetNumberClub9();
-  void GetNumberSpade10();
-  void GetNumberHeart11();
-  void GetNumberDiamond12();
-  void GetNumberClub13();
+
+  void IsSpadeAllSpade();
+  void IsSpadeAllHeart();
+  void IsSpadeAllDiamond();
+  void IsSpadeAllClub();
+  void IsSpadeAllJoker();
+  void IsHeartAllSpade();
+  void IsHeartAllHeart();
+  void IsHeartAllDiamond();
+  void IsHeartAllClub();
+  void IsHeartAllJoker();
+  void IsDiamondAllSpade();
+  void IsDiamondAllHeart();
+  void IsDiamondAllDiamond();
+  void IsDiamondAllClub();
+  void IsDiamondAllJoker();
+  void IsClubAllSpade();
+  void IsClubAllHeart();
+  void IsClubAllDiamond();
+  void IsClubAllClub();
+  void IsClubAllJoker();
 
 #if 0
-
-  /**
-   * @brief ジョーカーか
-   *
-   * @return true ジョーカー
-   * @return false ジョーカーではない
-   */
-  bool isJoker() const;
-
-  /**
-   * @brief スートがスペードか
-   *
-   * @return true スートがスペード
-   * @return false スートがスペードではない
-   */
-  bool isSpade() const;
-
-  /**
-   * @brief スートがハート
-   *
-   * @return true スートがハート
-   * @return false スートがハートではない
-   */
-  bool isHeart() const;
-
-  /**
-   * @brief スートがダイヤ
-   *
-   * @return true スートがダイヤ
-   * @return false スートがダイヤではない
-   */
-  bool isDiamond() const;
-
-  /**
-   * @brief スートがクラブ
-   *
-   * @return true スートがクラブ
-   * @return false スートがクラブではない
-   */
-  bool isClub() const;
-
   /**
    * @brief スート文字列を取得する
    *

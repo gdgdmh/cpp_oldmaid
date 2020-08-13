@@ -77,7 +77,7 @@ int trump::Trump::GetNumber() const { return number_; }
  * @return true ジョーカー
  * @return false ジョーカーではない
  */
-bool trump::Trump::isJoker() const {
+bool trump::Trump::IsJoker() const {
   if (is_joker_) {
     return true;
   }
@@ -90,7 +90,7 @@ bool trump::Trump::isJoker() const {
  * @return true スートがスペード
  * @return false スートがスペードではない
  */
-bool trump::Trump::isSpade() const {
+bool trump::Trump::IsSpade() const {
   if (suit_ == trump::Trump::SUIT::SPADE) {
     return true;
   }
@@ -103,7 +103,7 @@ bool trump::Trump::isSpade() const {
  * @return true スートがハート
  * @return false スートがハートではない
  */
-bool trump::Trump::isHeart() const {
+bool trump::Trump::IsHeart() const {
   if (suit_ == trump::Trump::SUIT::HEART) {
     return true;
   }
@@ -116,7 +116,7 @@ bool trump::Trump::isHeart() const {
  * @return true スートがダイヤ
  * @return false スートがダイヤではない
  */
-bool trump::Trump::isDiamond() const {
+bool trump::Trump::IsDiamond() const {
   if (suit_ == trump::Trump::SUIT::DIAMOND) {
     return true;
   }
@@ -129,7 +129,7 @@ bool trump::Trump::isDiamond() const {
  * @return true スートがクラブ
  * @return false スートがクラブではない
  */
-bool trump::Trump::isClub() const {
+bool trump::Trump::IsClub() const {
   if (suit_ == trump::Trump::SUIT::CLUB) {
     return true;
   }

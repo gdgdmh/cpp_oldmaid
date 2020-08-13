@@ -84,7 +84,7 @@ class Trump {
    * @return true ジョーカー
    * @return false ジョーカーではない
    */
-  bool isJoker() const;
+  bool IsJoker() const;
 
   /**
    * @brief スートがスペードか
@@ -92,7 +92,7 @@ class Trump {
    * @return true スートがスペード
    * @return false スートがスペードではない
    */
-  bool isSpade() const;
+  bool IsSpade() const;
 
   /**
    * @brief スートがハート
@@ -100,7 +100,7 @@ class Trump {
    * @return true スートがハート
    * @return false スートがハートではない
    */
-  bool isHeart() const;
+  bool IsHeart() const;
 
   /**
    * @brief スートがダイヤ
@@ -108,7 +108,7 @@ class Trump {
    * @return true スートがダイヤ
    * @return false スートがダイヤではない
    */
-  bool isDiamond() const;
+  bool IsDiamond() const;
 
   /**
    * @brief スートがクラブ
@@ -116,7 +116,7 @@ class Trump {
    * @return true スートがクラブ
    * @return false スートがクラブではない
    */
-  bool isClub() const;
+  bool IsClub() const;
 
   /**
    * @brief スート文字列を取得する
