@@ -23,6 +23,7 @@ class Trump {
   static const int MAX_JOKER = 2;    // ジョーカーの最大枚数
 
  private:
+  // 文字列定義
   static const std::shared_ptr<std::string> STR_NONE;
   static const std::shared_ptr<std::string> STR_SPADE;
   static const std::shared_ptr<std::string> STR_HEART;
@@ -62,7 +63,7 @@ class Trump {
    * @brief トランプの出力(ショート版)
    *
    */
-  void PrintShort();
+  void ShortPrint();
 
   /**
    * @brief スートの取得
@@ -130,7 +131,7 @@ class Trump {
    *
    * @return std::string 短いスート文字列(S,H,D,C)
    */
-  std::string GetSuitShortString();
+  std::string GetShortSuitString();
 
   /**
    * @brief 接頭辞を取得する
@@ -144,7 +145,7 @@ class Trump {
    *
    * @return std::string 短い接頭辞文字列(J,S,H,D,C)
    */
-  std::string GetPrefixShortString();
+  std::string GetShortPrefixString();
 
   /**
    * @brief 接尾辞を取得する

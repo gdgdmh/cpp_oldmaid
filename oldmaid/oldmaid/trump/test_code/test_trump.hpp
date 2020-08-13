@@ -88,7 +88,7 @@ class TestTrump : public mhl::UnitTestBase {
    *
    * @return std::string 短いスート文字列(S,H,D,C)
    */
-  std::string GetSuitShortString();
+  std::string GetShortSuitString();
 
   /**
    * @brief 接頭辞を取得する
@@ -102,7 +102,7 @@ class TestTrump : public mhl::UnitTestBase {
    *
    * @return std::string 短い接頭辞文字列(J,S,H,D,C)
    */
-  std::string GetPrefixShortString();
+  std::string GetShortPrefixString();
 
   /**
    * @brief 接尾辞を取得する

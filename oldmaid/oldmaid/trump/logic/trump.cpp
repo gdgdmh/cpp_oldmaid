@@ -55,7 +55,7 @@ void trump::Trump::Print() {}
  * @brief トランプの出力(ショート版)
  *
  */
-void trump::Trump::PrintShort() {}
+void trump::Trump::ShortPrint() {}
 
 /**
  * @brief スートの取得
@@ -165,7 +165,7 @@ std::string trump::Trump::GetSuitString() {
  *
  * @return std::string 短いスート文字列(S,H,D,C,J)
  */
-std::string trump::Trump::GetSuitShortString() {
+std::string trump::Trump::GetShortSuitString() {
   if (is_joker_) {
     return (*trump::Trump::STR_SHORT_NONE);
   }
@@ -213,7 +213,7 @@ std::string trump::Trump::GetPrefixString() {
  *
  * @return std::string 短い接頭辞文字列(J,S,H,D,C)
  */
-std::string trump::Trump::GetPrefixShortString() {
+std::string trump::Trump::GetShortPrefixString() {
   if (is_joker_) {
     return (*trump::Trump::STR_SHORT_JOKER);
   }
