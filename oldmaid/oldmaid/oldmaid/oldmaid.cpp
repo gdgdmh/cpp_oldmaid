@@ -3,12 +3,15 @@
 
 #include <memory>
 #include "../mhl/test_code/test_mhl.hpp"
+#include "../trump/test_code/test_trump_tests.hpp"
 #include "../mhl/util/output/output_console.hpp"
 
 int main() {
   std::shared_ptr<mhl::IOutputConsole> output(new mhl::OutputConsole());
   test::TestMhl test(output);
   test.ExecuteUnitTest();
+  test_code::TestTrumpTests trump_tests(output);
+  trump_tests.ExecuteUnitTest();
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー

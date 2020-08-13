@@ -43,6 +43,9 @@
     <Filter Include="trump\logic">
       <UniqueIdentifier>{fd3e8a32-2fba-4766-b0df-c01930d8866b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="trump\test">
+      <UniqueIdentifier>{f3175a46-6f19-472e-88e3-982f231630b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="oldmaid\oldmaid.cpp">
@@ -86,6 +89,12 @@
     </ClCompile>
     <ClCompile Include="mhl\util\output\output_console.cpp">
       <Filter>mhl\util\output</Filter>
+    </ClCompile>
+    <ClCompile Include="trump\test_code\test_trump.cpp">
+      <Filter>trump\test</Filter>
+    </ClCompile>
+    <ClCompile Include="trump\test_code\test_trump_tests.cpp">
+      <Filter>trump\test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +157,12 @@
     </ClInclude>
     <ClInclude Include="mhl\util\template\subject.hpp">
       <Filter>mhl\util\template</Filter>
+    </ClInclude>
+    <ClInclude Include="trump\test_code\test_trump.hpp">
+      <Filter>trump\test</Filter>
+    </ClInclude>
+    <ClInclude Include="trump\test_code\test_trump_tests.hpp">
+      <Filter>trump\test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

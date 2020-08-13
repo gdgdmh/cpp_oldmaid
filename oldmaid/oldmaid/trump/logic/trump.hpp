@@ -23,11 +23,18 @@ class Trump {
   static const int MAX_JOKER = 2;    // ジョーカーの最大枚数
 
  private:
+  static const std::shared_ptr<std::string> STR_NONE;
   static const std::shared_ptr<std::string> STR_SPADE;
   static const std::shared_ptr<std::string> STR_HEART;
   static const std::shared_ptr<std::string> STR_DIAMOND;
   static const std::shared_ptr<std::string> STR_CLUB;
   static const std::shared_ptr<std::string> STR_JOKER;
+  static const std::shared_ptr<std::string> STR_SHORT_NONE;
+  static const std::shared_ptr<std::string> STR_SHORT_SPADE;
+  static const std::shared_ptr<std::string> STR_SHORT_HEART;
+  static const std::shared_ptr<std::string> STR_SHORT_DIAMOND;
+  static const std::shared_ptr<std::string> STR_SHORT_CLUB;
+  static const std::shared_ptr<std::string> STR_SHORT_JOKER;
 
  public:
   /**
@@ -124,6 +131,27 @@ class Trump {
    * @return std::string 短いスート文字列(S,H,D,C)
    */
   std::string GetSuitShortString();
+
+  /**
+   * @brief 接頭辞を取得する
+   *
+   * @return std::string 接頭辞文字列(Joker,Spade,Heart,Diamond,Club)
+   */
+  std::string GetPrefixString();
+
+  /**
+   * @brief 短い接頭辞を取得する
+   *
+   * @return std::string 短い接頭辞文字列(J,S,H,D,C)
+   */
+  std::string GetPrefixShortString();
+
+  /**
+   * @brief 接尾辞を取得する
+   *
+   * @return std::string 接尾辞(1～13)
+   */
+  std::string GetSuffixString();
 
   /**
    * @brief ソート用番号の取得

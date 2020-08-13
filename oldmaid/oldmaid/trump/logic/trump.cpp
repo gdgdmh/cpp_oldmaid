@@ -1,6 +1,10 @@
 ﻿#include "trump.hpp"
 
+#include "../../mhl/util/string/std_string_formatter.hpp"
+
 // static
+const std::shared_ptr<std::string> trump::Trump::STR_NONE(
+    new std::string("none"));
 const std::shared_ptr<std::string> trump::Trump::STR_SPADE(
     new std::string("spade"));
 const std::shared_ptr<std::string> trump::Trump::STR_HEART(
@@ -11,6 +15,19 @@ const std::shared_ptr<std::string> trump::Trump::STR_CLUB(
     new std::string("club"));
 const std::shared_ptr<std::string> trump::Trump::STR_JOKER(
     new std::string("joker"));
+
+const std::shared_ptr<std::string> trump::Trump::STR_SHORT_NONE(
+    new std::string("N"));
+const std::shared_ptr<std::string> trump::Trump::STR_SHORT_SPADE(
+    new std::string("S"));
+const std::shared_ptr<std::string> trump::Trump::STR_SHORT_HEART(
+    new std::string("H"));
+const std::shared_ptr<std::string> trump::Trump::STR_SHORT_DIAMOND(
+    new std::string("D"));
+const std::shared_ptr<std::string> trump::Trump::STR_SHORT_CLUB(
+    new std::string("C"));
+const std::shared_ptr<std::string> trump::Trump::STR_SHORT_JOKER(
+    new std::string("J"));
 
 /**
  * @brief Construct a new Trump object
@@ -126,33 +143,110 @@ bool trump::Trump::isClub() const {
  */
 std::string trump::Trump::GetSuitString() {
   if (is_joker_) {
-    return (*trump::Trump::STR_JOKER);
+    return (*trump::Trump::STR_NONE);
   }
-  if (suit_ == trump::Trump::SPADE) {
+  if (suit_ == trump::Trump::SUIT::SPADE) {
     return (*trump::Trump::STR_SPADE);
   }
-  if (suit_ == trump::Trump::HEART) {
+  if (suit_ == trump::Trump::SUIT::HEART) {
     return (*trump::Trump::STR_HEART);
   }
-  if (suit_ == trump::Trump::DIAMOND) {
+  if (suit_ == trump::Trump::SUIT::DIAMOND) {
     return (*trump::Trump::STR_DIAMOND);
   }
-  if (suit_ == trump::Trump::CLUB) {
+  if (suit_ == trump::Trump::SUIT::CLUB) {
     return (*trump::Trump::STR_CLUB);
   }
-  return "";
+  return (*trump::Trump::STR_NONE);
 }
 
 /**
  * @brief 短いスート文字列を取得する
  *
- * @return std::string 短いスート文字列(S,H,D,C)
+ * @return std::string 短いスート文字列(S,H,D,C,J)
  */
-std::string trump::Trump::GetSuitShortString() {}
+std::string trump::Trump::GetSuitShortString() {
+  if (is_joker_) {
+    return (*trump::Trump::STR_SHORT_NONE);
+  }
+  if (suit_ == trump::Trump::SUIT::SPADE) {
+    return (*trump::Trump::STR_SHORT_SPADE);
+  }
+  if (suit_ == trump::Trump::SUIT::HEART) {
+    return (*trump::Trump::STR_SHORT_HEART);
+  }
+  if (suit_ == trump::Trump::SUIT::DIAMOND) {
+    return (*trump::Trump::STR_SHORT_DIAMOND);
+  }
+  if (suit_ == trump::Trump::SUIT::CLUB) {
+    return (*trump::Trump::STR_SHORT_CLUB);
+  }
+  return (*trump::Trump::STR_SHORT_NONE);
+}
+
+/**
+ * @brief 接頭辞を取得する
+ *
+ * @return std::string 接頭辞文字列(Joker,Spade,Heart,Diamond,Club)
+ */
+std::string trump::Trump::GetPrefixString() {
+  if (is_joker_) {
+    return (*trump::Trump::STR_JOKER);
+  }
+  if (suit_ == trump::Trump::SUIT::SPADE) {
+    return (*trump::Trump::STR_SPADE);
+  }
+  if (suit_ == trump::Trump::SUIT::HEART) {
+    return (*trump::Trump::STR_HEART);
+  }
+  if (suit_ == trump::Trump::SUIT::DIAMOND) {
+    return (*trump::Trump::STR_DIAMOND);
+  }
+  if (suit_ == trump::Trump::SUIT::CLUB) {
+    return (*trump::Trump::STR_CLUB);
+  }
+  return (*trump::Trump::STR_NONE);
+}
+
+/**
+ * @brief 短い接頭辞を取得する
+ *
+ * @return std::string 短い接頭辞文字列(J,S,H,D,C)
+ */
+std::string trump::Trump::GetPrefixShortString() {
+  if (is_joker_) {
+    return (*trump::Trump::STR_SHORT_JOKER);
+  }
+  if (suit_ == trump::Trump::SUIT::SPADE) {
+    return (*trump::Trump::STR_SHORT_SPADE);
+  }
+  if (suit_ == trump::Trump::SUIT::HEART) {
+    return (*trump::Trump::STR_SHORT_HEART);
+  }
+  if (suit_ == trump::Trump::SUIT::DIAMOND) {
+    return (*trump::Trump::STR_SHORT_DIAMOND);
+  }
+  if (suit_ == trump::Trump::SUIT::CLUB) {
+    return (*trump::Trump::STR_SHORT_CLUB);
+  }
+  return (*trump::Trump::STR_SHORT_NONE);
+}
+
+/**
+ * @brief 接尾辞を取得する
+ *
+ * @return std::string 接尾辞(1～13)
+ */
+std::string trump::Trump::GetSuffixString() {
+  return mhl::StdStringFormatter::Format("%d", number_);
+}
 
 /**
  * @brief ソート用番号の取得
  *
  * @return int ソート用番号
  */
-int trump::Trump::GetSortNumber() {}
+int trump::Trump::GetSortNumber() {
+  // 仮
+  return number_;
+}
