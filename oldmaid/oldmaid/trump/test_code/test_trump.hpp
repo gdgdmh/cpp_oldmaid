@@ -75,50 +75,35 @@ class TestTrump : public mhl::UnitTestBase {
   void IsClubAllClub();
   void IsClubAllJoker();
 
-#if 0
-  /**
-   * @brief スート文字列を取得する
-   *
-   * @return std::string スート文字列(Spade,Heart,Diamond,Club)
-   */
-  std::string GetSuitString();
+  void GetSuitStringAllSpade();
+  void GetSuitStringAllHeart();
+  void GetSuitStringAllDiamond();
+  void GetSuitStringAllClub();
+  void GetSuitStringAllJoker();
 
-  /**
-   * @brief 短いスート文字列を取得する
-   *
-   * @return std::string 短いスート文字列(S,H,D,C)
-   */
-  std::string GetShortSuitString();
+  void GetSuitShortStringAllSpade();
+  void GetSuitShortStringAllHeart();
+  void GetSuitShortStringAllDiamond();
+  void GetSuitShortStringAllClub();
+  void GetSuitShortStringAllJoker();
 
-  /**
-   * @brief 接頭辞を取得する
-   *
-   * @return std::string 接頭辞文字列(Joker,Spade,Heart,Diamond,Club)
-   */
-  std::string GetPrefixString();
+  void GetPrefixStringAllSpade();
+  void GetPrefixStringAllHeart();
+  void GetPrefixStringAllDiamond();
+  void GetPrefixStringAllClub();
+  void GetPrefixStringAllJoker();
 
-  /**
-   * @brief 短い接頭辞を取得する
-   *
-   * @return std::string 短い接頭辞文字列(J,S,H,D,C)
-   */
-  std::string GetShortPrefixString();
+  void GetShortPrefixStringAllSpade();
+  void GetShortPrefixStringAllHeart();
+  void GetShortPrefixStringAllDiamond();
+  void GetShortPrefixStringAllClub();
+  void GetShortPrefixStringAllJoker();
 
-  /**
-   * @brief 接尾辞を取得する
-   *
-   * @return std::string 接尾辞(1～13)
-   */
-  std::string GetSuffixString();
-
-  /**
-   * @brief ソート用番号の取得
-   *
-   * @return int ソート用番号
-   */
-  int GetSortNumber();
-
-#endif  // if 0
+  void GetSuffixStringAllSpade();
+  void GetSuffixStringAllHeart();
+  void GetSuffixStringAllDiamond();
+  void GetSuffixStringAllClub();
+  void GetSuffixStringAllJoker();
 };
 
 }  // namespace test_code
