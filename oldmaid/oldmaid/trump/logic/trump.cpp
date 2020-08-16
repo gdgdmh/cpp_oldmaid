@@ -37,7 +37,12 @@ const std::shared_ptr<std::string> trump::Trump::STR_SHORT_JOKER(
  * @param is_joker ジョーカーか
  */
 trump::Trump::Trump(trump::Trump::SUIT suit, int number, bool is_joker)
-    : suit_(suit), number_(number), is_joker_(is_joker) {}
+    : suit_(suit), number_(number), is_joker_(is_joker) {
+  // validation
+  ValidationSuit(suit, is_joker);
+  ValidationNumber(number, suit);
+  ValidationJoker(is_joker, number);
+}
 
 /**
  * @brief Destroy the Trump object
@@ -49,7 +54,9 @@ trump::Trump::~Trump() {}
  * @brief トランプの出力
  *
  */
-void trump::Trump::Print() {}
+void trump::Trump::Print() {
+  std::string s = GetPrefixString() + GetSuffixString();
+}
 
 /**
  * @brief トランプの出力(ショート版)
@@ -250,3 +257,35 @@ int trump::Trump::GetSortNumber() {
   // 仮
   return number_;
 }
+
+/**
+ * @brief スートのバリデーションチェック
+ *
+ * @param suit バリデーション対象スート
+ * @param is_joker バリデーション対象ジョーカーフラグ
+ * @return true 正常なスート
+ * @return false 不正なスート
+ */
+bool trump::Trump::ValidationSuit(SUIT suit, bool is_joker) { return false; }
+
+/**
+ * @brief 番号のバリデーションチェック
+ * スートも加味する
+ *
+ * @param number バリデーション対象番号
+ * @param suit バリデーション対象スート
+ * @return true 正常な番号
+ * @return false 不正な番号
+ */
+bool trump::Trump::ValidationNumber(int number, SUIT suit) { return false; }
+
+/**
+ * @brief ジョーカーのバリデーションチェック
+ * 番号も加味する
+ *
+ * @param is_joker バリデーション対象ジョーカーフラグ
+ * @param number バリデーション対象番号
+ * @return true 正常なジョーカーフラグ
+ * @return false 不正なジョーカーフラグ
+ */
+bool trump::Trump::ValidationJoker(bool is_joker, int number) { return false; }

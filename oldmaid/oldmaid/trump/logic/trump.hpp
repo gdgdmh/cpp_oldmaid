@@ -162,6 +162,39 @@ class Trump {
   int GetSortNumber();
 
  private:
+  /**
+   * @brief スートのバリデーションチェック
+   *
+   * @param suit バリデーション対象スート
+   * @param is_joker バリデーション対象ジョーカーフラグ
+   * @return true 正常なスート
+   * @return false 不正なスート
+   */
+  bool ValidationSuit(SUIT suit, bool is_joker);
+
+  /**
+   * @brief 番号のバリデーションチェック
+   * スートも加味する
+   *
+   * @param number バリデーション対象番号
+   * @param suit バリデーション対象スート
+   * @return true 正常な番号
+   * @return false 不正な番号
+   */
+  bool ValidationNumber(int number, SUIT suit);
+
+  /**
+   * @brief ジョーカーのバリデーションチェック
+   * 番号も加味する
+   *
+   * @param is_joker バリデーション対象ジョーカーフラグ
+   * @param number バリデーション対象番号
+   * @return true 正常なジョーカーフラグ
+   * @return false 不正なジョーカーフラグ
+   */
+  bool ValidationJoker(bool is_joker, int number);
+
+ private:
   SUIT suit_;
   int number_;
   bool is_joker_;
